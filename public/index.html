@@ -2,13 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,user-scalable=no,initial-scale=1.0 ,maximum-scale=1.0,minimum-scale=1.0">
     <meta name="theme-color" content="#000000">
-    <!-- <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json"> -->
-    <title>React App</title>
+    <title>简易画板</title>
   </head>
   <body>
-    <div id="root"></div>
+    <canvas id='xxx' width="300" height="300"></canvas>
+    <div id="actions" class="actions">
+            <svg id='pen' class="active icon" >
+                    <use xlink:href="#icon-qianbipencil84"></use>
+            </svg>
+
+            <svg id='eraser' class="icon" >
+                    <use xlink:href="#icon-icon-test"></use>
+            </svg> 
+            <svg id='clear' class="icon" >
+                    <use xlink:href="#icon-clearup"></use>
+            </svg>
+            <svg id='download' class="icon" >
+                    <use xlink:href="#icon-save1"></use>
+            </svg>     
+    </div>
+    <ol class="colors">
+        <li id="red" class="red active"></li>
+        <li id="green" class="green"></li>
+        <li id="blue" class="blue"></li>
+    </ol>
+    <ol class="sizes">
+        <li id="thin"  class="thin"></li>
+        <li id="thick" class="thick"></li>
+    </ol>
+
+    
+    <script src="//at.alicdn.com/t/font_741837_837xwosr3aj.js"></script>
   </body>
 </html>

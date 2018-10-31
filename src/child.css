@@ -1,9 +1,0 @@
-@import './xxx.css';
-
-$textColor: blue;
-body{
-    color: $textColor;
-    .wrapper{
-        color: white;
-    }
-}
