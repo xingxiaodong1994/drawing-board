@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://xingxiaodong1994.github.io/drawing-board/build/",
   "dependencies": {
     "@babel/core": "7.1.0",
     "@svgr/webpack": "2.4.1",
@@ -55,7 +56,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -127,6 +130,7 @@
     "@tweenjs/tween.js": "^17.2.0",
     "classnames": "^2.2.6",
     "eventemitter3": "^3.1.0",
+    "gh-pages": "^2.0.1",
     "highcharts": "^6.2.0",
     "leancloud-storage": "^3.10.0",
     "postcss-import": "^12.0.1",
