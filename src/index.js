@@ -2,17 +2,13 @@ import * as serviceWorker from './serviceWorker';
 import './index.css'
 serviceWorker.unregister();
 
-
-
 /*设置画板宽高*/
-var yyy=document.getElementById('xxx');
-var context=yyy.getContext('2d');
+var board=document.getElementById('xxx');
+var context=board.getContext('2d');
 var lineWidth=5
 
-autoSetCanvasSize(yyy)
-
-/*******/
-listenToMouse(yyy)
+autoSetCanvasSize(board)
+listenToMouse(board)
 
 /*******/
 let pen=document.getElementById('pen');
@@ -24,7 +20,10 @@ let clear=document.getElementById('clear');
 let download=document.getElementById('download');
 let thin=document.getElementById('thin');
 let thick =document.getElementById('thick');
+
 var eraserEnabled=false
+
+//绑定事件
 pen.onclick=function(){
     eraserEnabled=false
     pen.classList.add('active')
@@ -57,10 +56,10 @@ blue.onclick=function(){
     red.classList.remove('active')
 }
 clear.onclick=function(){
-    context.clearRect(0,0,yyy.width,yyy.height);
+    context.clearRect(0,0,board.width,board.height);
 }
 download.onclick=function(){
-    var url = yyy.toDataURL('image/png')
+    var url = board.toDataURL('image/png')
     var a = document.createElement('a')
     document.body.appendChild(a)
     a.href=url
@@ -76,29 +75,22 @@ thick.onclick=function(){
 }
 
 /*******/
-
-
 function listenToMouse(canvas){     
     var lastPoint={x:undefined,y:undefined}
     var using=false
     //特性检测
     if(document.body.ontouchstart!==undefined){
         canvas.ontouchstart=function(aaa){
-            //console.log('开始摸我了')
             var x=aaa.touches[0].clientX;//相对于视口位置！！！
             var y=aaa.touches[0].clientY;
-            //console.log(x,y)
             using=true
             if(eraserEnabled){   
                 context.clearRect(x-5,y-5,10,10)
             }else{
                 lastPoint={'x':x,'y':y}
-                // console.log(lastPoint)
-                // drawCircle(x,y,1)
             }    
         }
         canvas.ontouchmove=function(aaa){
-           //console.log('边摸边动')
            var x=aaa.touches[0].clientX;//相对于视口位置！！！
            var y=aaa.touches[0].clientY;
            if(!using){return}
@@ -142,8 +134,7 @@ function listenToMouse(canvas){
                }           
        }
        canvas.onmouseup=function(aaa){ using=false;}   
-    }
-               
+    }              
 }        
 function drawCircle(x,y,radius){
     context.beginPath();
@@ -186,11 +177,5 @@ function autoSetCanvasSize(canvas){
      // context.lineTo(300,240)
      // context.lineTo(300,300)
      // context.fill()
-     //context.closePath()
-    
+     // context.closePath() 
 }
-
-
-
-
-
