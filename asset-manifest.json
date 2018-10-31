@@ -1,0 +1,13 @@
+{
+  "main.css": "/drawing-board/build/static/css/main.a180cf39.chunk.css",
+  "main.js": "/drawing-board/build/static/js/main.c71684ca.chunk.js",
+  "main.js.map": "/drawing-board/build/static/js/main.c71684ca.chunk.js.map",
+  "static/js/1.defed9a4.chunk.js": "/drawing-board/build/static/js/1.defed9a4.chunk.js",
+  "static/js/1.defed9a4.chunk.js.map": "/drawing-board/build/static/js/1.defed9a4.chunk.js.map",
+  "runtime~main.js": "/drawing-board/build/static/js/runtime~main.5c843a38.js",
+  "runtime~main.js.map": "/drawing-board/build/static/js/runtime~main.5c843a38.js.map",
+  "static/css/main.a180cf39.chunk.css.map": "/drawing-board/build/static/css/main.a180cf39.chunk.css.map",
+  "index.html": "/drawing-board/build/index.html",
+  "precache-manifest.9b48ef8bebb66d3edc8151a525783b7c.js": "/drawing-board/build/precache-manifest.9b48ef8bebb66d3edc8151a525783b7c.js",
+  "service-worker.js": "/drawing-board/build/service-worker.js"
+}
