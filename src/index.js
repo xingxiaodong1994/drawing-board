@@ -136,13 +136,13 @@ function listenToMouse(canvas){
        canvas.onmouseup=function(aaa){ using=false;}   
     }              
 }        
-function drawCircle(x,y,radius){
-    context.beginPath();
-    context.arc(x,y,radius,0,Math.PI*2)
-    //context.stroke()
-    //context.fillStyle='black';
-    context.fill()
-}
+// function drawCircle(x,y,radius){
+//     context.beginPath();
+//     context.arc(x,y,radius,0,Math.PI*2)
+//     //context.stroke()
+//     //context.fillStyle='black';
+//     context.fill()
+// }
 function drawLine(x1,y1,x2,y2){
     context.beginPath();
     context.moveTo(x1,y1);//起点
